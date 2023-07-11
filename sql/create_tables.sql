@@ -27,4 +27,4 @@ CREATE TABLE IF NOT EXISTS employees (
   deleted_at timestamp,
 
   foreign key (company_id) references companies(id)
-)
+);
