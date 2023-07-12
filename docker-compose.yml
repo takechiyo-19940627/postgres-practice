@@ -10,8 +10,13 @@ services:
       POSTGRES_DB: center
     volumes:
       - ./sql:/home/sql
+      - ./csv:/home/csv
+      - postgres_volume:/var/lib/postgresql/data
   adminer:
     image: adminer
     restart: always
     ports:
       - 8080:8080
+
+volumes:
+  postgres_volume:
