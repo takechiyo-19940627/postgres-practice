@@ -19,11 +19,12 @@ CREATE TABLE IF NOT EXISTS companies (
 
 CREATE TABLE IF NOT EXISTS employees (
   id integer primary key,
-  name varchar(255) not null,
   company_id integer not null,
+  first_name varchar(255) not null,
+  last_name varchar(255) not null,
+  retired_at timestamp,
   created_at timestamp not null default CURRENT_TIMESTAMP,
   updated_at timestamp,
-  retired_at timestamp,
   deleted_at timestamp,
 
   foreign key (company_id) references companies(id)

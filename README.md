@@ -29,3 +29,8 @@ center=# SELECT * FROM pg_tables WHERE schemaname = 'public';
 ```
 
 ### 2-3 テストデータの投入
+```
+psql -U postgres -d center < home/sql/seed_companies.sql
+psql -U postgres -d center < home/sql/seed_ms_refectures.sql
+psql -U postgres -d center < home/sql/seed_employees.sql
+```
