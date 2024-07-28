@@ -26,7 +26,7 @@ RUN apt-get update && apt-get install -y \
     tzdata \
     nano \
     vim
-
+  
 # 利用可能なロケールを確認
 RUN locale -a
 
