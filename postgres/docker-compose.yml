@@ -8,6 +8,7 @@ services:
       - "5433:5433"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./scripts:/usr/local/scripts
     environment:
       - POSTGRES_PASSWORD=postgres
       - CLUSTER_COUNT=2
